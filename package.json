@@ -19,13 +19,20 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --detectOpenHandles",
+    "coverage": "yarn test --coverage --watchAll --detectOpenHandles --collectCoverageFrom=src/components/**/*.{ts,tsx} --collectCoverageFrom=!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}",
+    "eject": "react-scripts eject",
+    "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+    "prepare": "husky && husky install"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jest-dom/recommended",
+      "prettier",
+      "eslint-config-prettier"
     ]
   },
   "browserslist": {
@@ -38,6 +45,22 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest-dom": "^5.4.0",
+    "lint-staged": "^15.2.5",
+    "prettier": "3.3.1",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint"
+    ],
+    "*.{ts,tsx,css,scss}": [
+      "prettier --write"
     ]
   }
 }
