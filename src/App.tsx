@@ -1,24 +1,14 @@
-import React from 'react'
-import logo from './logo.svg'
 import './App.css'
+import Playing from './components/ui/playing/playing'
+import Starting from './components/ui/starting/starting'
+import { cards } from './cards'
+import shuffleArray from './utils/shuffle'
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div className="flex bg-slate-900 py-6 text-white selection:bg-slate-300 selection:text-slate-500 sm:py-0">
+            <Starting />
+            <Playing cards={shuffleArray(cards)} />
         </div>
     )
 }
