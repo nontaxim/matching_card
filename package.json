@@ -1,70 +1,73 @@
 {
-  "name": "matching_card",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^13.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
-    "@types/node": "^16.7.13",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
-    "web-vitals": "^2.1.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --detectOpenHandles",
-    "coverage": "yarn test --coverage --watchAll --detectOpenHandles --collectCoverageFrom=src/components/**/*.{ts,tsx} --collectCoverageFrom=!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}",
-    "eject": "react-scripts eject",
-    "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}",
-    "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
-    "prepare": "husky && husky install"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "plugin:jest-dom/recommended",
-      "prettier",
-      "eslint-config-prettier"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "autoprefixer": "^10.4.19",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jest-dom": "^5.4.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^15.2.5",
-    "postcss": "^8.4.38",
-    "prettier": "^3.3.1",
-    "prettier-plugin-tailwindcss": "^0.6.2",
-    "tailwindcss": "^3.4.4"
-  },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint"
-    ],
-    "*.{ts,tsx,css,scss}": [
-      "prettier --write"
-    ]
-  }
+    "name": "matching_card",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/dom": "^10.1.0",
+        "@testing-library/jest-dom": "^6.4.5",
+        "@testing-library/react": "^16.0.0",
+        "@testing-library/user-event": "^14.5.2",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.14.2",
+        "@types/react": "^18.0.0",
+        "@types/react-dom": "^18.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-scripts": "5.0.1",
+        "tailwind-merge": "^2.3.0",
+        "typescript": "^5.4.5",
+        "web-vitals": "^2.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --detectOpenHandles",
+        "coverage": "yarn test --coverage --watchAll --detectOpenHandles --collectCoverageFrom=src/components/**/*.{ts,tsx} --collectCoverageFrom=!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}",
+        "eject": "react-scripts eject",
+        "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}",
+        "lint": "eslint src --ext .ts,.tsx,.js,.jsx",
+        "prepare": "husky && husky install"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest",
+            "plugin:jest-dom/recommended",
+            "prettier",
+            "eslint-config-prettier"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+        "autoprefixer": "^10.4.19",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-jest-dom": "^5.4.0",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.5",
+        "postcss": "^8.4.38",
+        "prettier": "^3.3.1",
+        "prettier-plugin-tailwindcss": "^0.6.2",
+        "tailwindcss": "^3.4.4",
+        "tailwindcss-3d": "^1.0.6"
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "eslint"
+        ],
+        "*.{ts,tsx,css,scss}": [
+            "prettier --write"
+        ]
+    }
 }

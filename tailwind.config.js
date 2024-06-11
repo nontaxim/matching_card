@@ -4,5 +4,15 @@ module.exports = {
     theme: {
         extend: {}
     },
-    plugins: []
+    plugins: [
+        require('tailwindcss-3d'),
+        function ({ addUtilities }) {
+            addUtilities({
+                '.backface-hidden': {
+                    'backface-visibility': 'hidden',
+                    '-webkit-backface-visibility': 'hidden'
+                }
+            })
+        }
+    ]
 }
