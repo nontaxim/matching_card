@@ -1,7 +1,10 @@
 {
     "name": "matching_card",
+    "homepage": "https://nontaxim.github.io/matching_card/",
     "version": "0.1.0",
     "private": true,
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "dependencies": {
         "@testing-library/dom": "^10.1.0",
         "@testing-library/jest-dom": "^6.4.5",
@@ -11,6 +14,7 @@
         "@types/node": "^20.14.2",
         "@types/react": "^18.0.0",
         "@types/react-dom": "^18.0.0",
+        "gh-pages": "^6.1.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-scripts": "5.0.1",
@@ -22,6 +26,8 @@
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test --detectOpenHandles",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d build",
         "coverage": "yarn test --coverage --watchAll --detectOpenHandles --collectCoverageFrom=src/components/**/*.{ts,tsx} --collectCoverageFrom=!src/components/**/*.{types,stories,constants,test,spec}.{ts,tsx}",
         "eject": "react-scripts eject",
         "format": "prettier --write src/**/*.{ts,tsx,js,jsx,json,css,scss,md}",
